@@ -1,0 +1,27 @@
+@import url('./reset.css');
+
+:root{
+  --primary-700: #6941C6;
+  --primary-400: #B692F6;
+  --primary-900: #42307D;
+  --secoundry-100 : #F4EBFF;
+  --secoundry-300 : #D6BBFB;
+  --secoundry-900 : #42307D;
+  --gray-100: #F2F4F7;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family:  Roboto,  sans-serif;
+  background-color: var(--gray-100);
+  width: 100%;
+  height: 100dvh;
+}
+
+#root{
+  width: 100%;
+  height: 100%;
+}
