@@ -1,11 +1,15 @@
-import { useState } from 'react'
+import { ReactNode, useEffect, useRef, useState } from 'react'
 import './Selection_B.css'
 import { ArrowDown, SearchIcon } from '../../assets/Icons'
+import { useOutsideClick } from '../../Hooks/useOutSideClick'
 
 
 const Selection_B = () => {
     const [dropMenu, setDropMenu] = useState(false)
     const [selectCount, setSelectCount] = useState(0)
+
+    // _____ Custom Hook => If click outside of selection, selection will close! 
+    const menu_ref = useOutsideClick(setDropMenu)
 
     const itemList = Array.from(Array(50).keys())
     return (
@@ -18,7 +22,7 @@ const Selection_B = () => {
                 <span><ArrowDown /></span>
             </div>
             {dropMenu &&
-                <div className="options">
+                <div ref={menu_ref} className="options">
                     <ul className='options-content'>
                     <li className="search-box">
                         <span className="search-icon">
