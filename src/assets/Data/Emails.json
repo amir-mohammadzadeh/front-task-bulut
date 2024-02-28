@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "name":"Livia Stanton",
+        "subject":"Meeting scheduled",
+        "date":"1:24 PM",
+        "image":"/public/profiles/profile_1.jpg"
+    },
+    {
+        "id":2,
+        "name":"Allisin Lipshutz",
+        "subject":"Update on marketing campaign",
+        "date":"12:14 PM",
+        "image":"/public/profiles/profile_2.jpg"
+    },
+    {
+        "id":3,
+        "name":"Martin Stanton",
+        "subject":"Designly 2.0 is about to launch",
+        "date":"Dec 19 at 8:01 PM",
+        "image":"/public/profiles/profile_3.jpg"
+    },
+    {
+        "id":4,
+        "name":"Alfredo Botosh",
+        "subject":"My friend Julie loves Dapper!",
+        "date":"Dec 19 at 6:11 PM",
+        "image":"/public/profiles/profile_4.jpg"
+    },
+    {
+        "id":5,
+        "name":"Ann Philips",
+        "subject":"My friend Julie loves Dapper!",
+        "date":"Dec 19 at 6:11 PM",
+        "image":"/public/profiles/profile_5.jpg"
+    },
+    {
+        "id":6,
+        "name":"Martin Calzoni",
+        "subject":"My friend Julie loves Dapper!",
+        "date":"Dec 19 at 6:11 PM",
+        "image":"/public/profiles/profile_6.jpg"
+    }
+]
