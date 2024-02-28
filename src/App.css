@@ -1,0 +1,21 @@
+.App_container{
+    background-color: rgba(9, 123, 123, 0);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+}
+/*
+.sideMenu_container{
+    background-color: var(--primary-700);
+    color: white;
+    width: 12rem;
+    height: 100% ;
+    text-align: center;
+}*/
+
+.main_container{
+    background-color: rgba(95, 158, 160, 0.00);
+    padding-inline: 1.5rem 2rem;
+}
