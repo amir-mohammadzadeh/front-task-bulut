@@ -1,4 +1,4 @@
-.sideMenu_container {
+.sidebar_container {
     background-color: var(--brand-700);
     color: white;
     width: 5rem;
@@ -8,13 +8,13 @@
 
 }
 
-.sidemenu-header {
+.sidebar-header {
     position: relative;
     background-color: rgba(0, 255, 255, 0.0);
     margin-block: 2rem;
 }
 
-.sidemenu-toggle {
+.sidebar-toggle {
     position: absolute;
     top: 2rem;
     right: -1rem;
@@ -32,13 +32,13 @@
 
 /*_______ sideMenu Links ___________________________________ */
 
-.sidemenu_body {
+.sidebar_body {
     font-size: 1rem;
     height: calc(100% - 6rem);
     overflow: hidden;
 }
 
-.sidemenu_body {
+.sidebar_body {
     position: relative;
     background-color: rgba(128, 255, 0, 0.0);
     list-style-type: none;
@@ -48,7 +48,7 @@
     gap: 1rem;
 }
 
-.sidemenu-link {
+.sidebar-link {
     display: flex;
     align-items: center;
     gap: .75rem;
@@ -61,7 +61,7 @@
     transition: .3s;
 }
 
-.sidemenu_body li:last-child {
+.sidebar_body li:last-child {
     position: absolute;
     bottom: 1rem;
     width: 100%;
@@ -69,25 +69,25 @@
 
 /* When SideMenu is open: ========================== */
 
-.open-sidemenu {
+.open-sidebar {
     width: 11rem;
 }
 
-.open-sidemenu .sidemenu-toggle {
+.open-sidebar .sidebar-toggle {
     transform: rotate(540deg);
+    box-shadow: 0 -4px 4px 0 #00000025;
 }
 
-
-/* When SideMenu link be active : ==========================================*/
-.sidemenu_body li:has(.sidemenu_link_active) {
+/* When sidebar link be active : ==========================================*/
+.sidebar_body li:has(.sidebar_link_active) {
     background-color: brown;
 }
 
-.sidemenu_link_active {
+.sidebar_link_active {
     position: relative;
 }
 
-.sidemenu_link_active::before {
+.sidebar_link_active::before {
     content: '';
     position: absolute;
     left: 0;
@@ -98,7 +98,7 @@
     background-color: white;
 }
 
-.sidemenu_link_active .link-title {
+.sidebar_link_active .link-title {
     text-decoration: underline;
     text-decoration-thickness: 0.15rem;
     text-underline-offset: 5px;

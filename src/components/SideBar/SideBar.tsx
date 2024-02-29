@@ -1,25 +1,25 @@
 import { useState } from 'react'
 import { ArrowLeft, BankIcon, UsersGroupIcon, HomeDashbord, SettingIcon, EmailIcon, ChartIcon, ListIcon, MoneySendIcon } from '../../assets/Icons'
-import './SideMenu.css'
+import './SideBar.css'
 
-const SideMenu = () => {
+const SideBar = () => {
 
-    const [openSideMenu, setOpenSideMenu] = useState(false)
-    let link_title_style = openSideMenu ? 'link-title opacity-1' : 'link-title opacity-0';
+    const [openSideBar, setOpenSideBar] = useState(false)
+    let link_title_style = openSideBar ? 'link-title opacity-1' : 'link-title opacity-0';
 
     return (
-        <aside className={openSideMenu ? "sideMenu_container open-sidemenu" : "sideMenu_container"}>
-            <div className='sidemenu-header'>
+        <aside className={openSideBar ? "sidebar_container open-sidebar" : "sidebar_container"}>
+            <div className='sidebar-header'>
                 <h3> Drop </h3>
-                <div className="sidemenu-toggle" onClick={() => setOpenSideMenu(!openSideMenu)}>
+                <div className="sidebar-toggle" onClick={() => setOpenSideBar(!openSideBar)}>
                     <ArrowLeft />
                 </div>
             </div>
 
-            <ul className="sidemenu_body">
+            <ul className="sidebar_body">
 
-                <li className='sidemenu_link_active'>
-                    <a href="" className='sidemenu-link'>
+                <li className='sidebar_link_active'>
+                    <a href="" className='sidebar-link'>
                         <span>
                             <HomeDashbord />
                         </span>
@@ -29,7 +29,7 @@ const SideMenu = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="" className='sidemenu-link'>
+                    <a href="" className='sidebar-link'>
                         <span>
                             <ChartIcon />
                         </span>
@@ -39,7 +39,7 @@ const SideMenu = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="" className='sidemenu-link'>
+                    <a href="" className='sidebar-link'>
                         <span>
                             <BankIcon />
                         </span>
@@ -49,7 +49,7 @@ const SideMenu = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="" className='sidemenu-link'>
+                    <a href="" className='sidebar-link'>
                         <span>
                             <EmailIcon />
                         </span>
@@ -59,7 +59,7 @@ const SideMenu = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="" className='sidemenu-link'>
+                    <a href="" className='sidebar-link'>
                         <span>
                             <UsersGroupIcon />
                         </span>
@@ -69,7 +69,7 @@ const SideMenu = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="" className='sidemenu-link'>
+                    <a href="" className='sidebar-link'>
                         <span>
                             <ListIcon />
                         </span>
@@ -79,7 +79,7 @@ const SideMenu = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="" className='sidemenu-link'>
+                    <a href="" className='sidebar-link'>
                         <span>
                             <MoneySendIcon />
                         </span>
@@ -90,7 +90,7 @@ const SideMenu = () => {
                 </li>
 
                 <li>
-                    <a href="" className='sidemenu-link'>
+                    <a href="" className='sidebar-link'>
                         <span>
                             <SettingIcon />
                         </span>
@@ -106,7 +106,7 @@ const SideMenu = () => {
     )
 }
 
-export default SideMenu
+export default SideBar
 
 /*
 
