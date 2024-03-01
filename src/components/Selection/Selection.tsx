@@ -1,5 +1,5 @@
-import { ReactNode, useEffect, useRef, useState } from 'react'
-import './Selection_B.css'
+import { useState } from 'react'
+import './Selection.css'
 import { ArrowDown, SearchIcon } from '../../assets/Icons'
 import { useOutsideClick } from '../../Hooks/useOutSideClick'
 
