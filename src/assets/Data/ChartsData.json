@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "day":"Monday",
+        "deposit":"235.85",
+        "withdrawal":"40.675"
+    },
+    {
+        "id":1,
+        "day":"Tuesday",
+        "deposit":"179.285",
+        "withdrawal":"19.075"
+    },
+    {
+        "id":1,
+        "day":"Wednesday",
+        "deposit":"140.012",
+        "withdrawal":"51.859"
+    },
+    {
+        "id":1,
+        "day":"Thursday",
+        "deposit":"150.898",
+        "withdrawal":"120.569"
+    },
+    {
+        "id":1,
+        "day":"Friday",
+        "deposit":"100",
+        "withdrawal":"50.650"
+    }
+]
