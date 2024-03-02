@@ -1,0 +1,150 @@
+.add-todo-modal {
+    height: 33rem;
+    width: 28rem;
+    padding: 1rem;
+    border-radius: .25rem;
+    background-color: white;
+}
+
+.modal-title {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--brand-700);
+}
+
+/*_________ FORM ________*/
+
+.add-todo-form {
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.select-box,
+.input-box {
+    position: relative;
+    color: var(--gray-900);
+    border: 1px solid var(--gray-500);
+    border-radius: .25rem;
+    padding: .5rem 2.2rem .5rem .5rem;
+    height: 2.5rem;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    border: 0;
+}
+
+.select-box .input-label,
+.input-box .input-label {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    padding: .15rem .25rem;
+    font-size: 1rem;
+    transition: .5s;
+}
+
+.select-box .onFocus,
+.input-box input:valid+.input-label,
+.input-box input:focus+.input-label {
+    font-size: .8rem;
+    letter-spacing: 0.5px;
+    background-color: var(--gray-100);
+    transform: translate(.4rem, -1.25rem);
+}
+
+.input-box input:valid~.icon {
+    display: block;
+}
+
+.input-box .icon {
+    display: none;
+    border: 2px solid;
+}
+
+.select-box .icon,
+.input-box .icon {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: .25rem;
+    line-height: .89rem;
+    border-radius: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*______ SELECTION BOX ________________*/
+.select-box {
+    height: 3rem;
+    padding-bottom: 3px;
+}
+
+.select-box .input-label {
+    top: .7rem;
+}
+
+.select-box .value-content {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.value-content::-webkit-scrollbar {
+    height: 3px;
+}
+
+.value-content::-webkit-scrollbar-thumb {
+    background-color: var(--gray-500);
+    border-radius: 100px;
+}
+
+.select-box .person {
+    flex-shrink: 0;
+    padding: .25rem .5rem .25rem .25rem;
+    border-radius: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: var(--brand-100);
+    font-size: .9rem;
+}
+
+.select-box .person img {
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 2rem;
+}
+
+.select-box .value-content .x-icon {
+    cursor: pointer;
+}
+
+/*______ FORM BUTTONS GROUP ______________*/
+
+.button-group {
+    flex-grow: 1;
+    display: flex;
+    align-items: end;
+    align-self: flex-end;
+    gap: .5rem;
+    font-family: Josefin Sans;
+    font-size: 1rem;
+}
+
+.button-group button {
+    width: 5rem;
+    border-radius: .25rem;
+}

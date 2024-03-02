@@ -1,6 +1,7 @@
 .percent-card_container {
-    width: max-content;
-    padding: 1.5rem 1rem;
+    min-width: 14rem;
+    width: auto;
+    padding:  1rem;
     border-radius: 1.5rem;
     background-color: var(--white);
     box-shadow: 0px 2px 4px -2px #1018281A, 0px 4px 8px -2px #1018281A;
@@ -8,7 +9,8 @@
     transition: .3s ease-out;
     display: flex;
     align-items: center;
-    gap: .5rem;
+    justify-content: space-around;
+    gap: 1rem;
 }
 
 .percent-card_container:hover {
