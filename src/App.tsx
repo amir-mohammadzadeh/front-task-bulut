@@ -1,23 +1,15 @@
-import { useState } from 'react'
+import { useRoutes } from 'react-router'
 import './App.css'
-import SideMenu from './components/sideMenu/SideMenu'
-import { Selection_A } from './components/Selection/Selection_A'
-import Selection_B from './components/Selection/Selection_B'
-import {FaAddressBook} from 'react-icon/fa'
+import SideBar from './components/SideBar/SideBar'
+import { Routes } from './router'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const routes = useRoutes(Routes)
   return (
     <>
       <div className="App_container">
-        
-          <SideMenu />
-        
-        <div className="main_container">
-          <Selection_B />
-          
-        </div>
+        <SideBar />
+        {routes}
       </div>
     </>
   )

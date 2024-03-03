@@ -1,20 +1,16 @@
 .App_container {
-    background-color: rgba(9, 123, 123, 0);
     height: 100dvh;
     width: 100%;
-
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 1.5rem;
-
 }
 
 .App_Main {
-    background-color: rgba(68, 185, 189, 0.0);
     padding-inline: .5rem;
-    margin-block: 1rem ;
+    margin-block: 1rem;
     overflow-y: auto;
-    max-width: 79rem;
+    max-width: 78rem;
     overflow-x: hidden;
     scrollbar-width: none;
 }
@@ -23,17 +19,23 @@
     width: 0;
 }
 
-.SideBarr {
-    background-color: var(--brand-700);
-    color: white;
-    width: 5rem;
-    height: 100%;
-    text-align: center;
+@media screen and (min-width: 1444px) {
+    .App_Main {
+        max-width: 83rem;
+    }
 }
 
+/*_______________*/
+.PAGE_404,
+.PAGE_UnAvailable {
+    place-self: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gray-900);
+}
 
-@media screen and (min-width: 1444px) {
-    .App_Main{
-        max-width: 84rem;
-    }
+.PAGE_404 {
+    font-size: 3rem;
+    color: var(--brand-500);
 }

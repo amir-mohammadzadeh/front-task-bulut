@@ -24,7 +24,7 @@
     width: 2rem;
     height: 2rem;
     border-radius: 2rem;
-    line-height: 2rem;
+    line-height: 2.2rem;
     box-shadow: 0 4px 4px 0 #00000025;
     cursor: pointer;
     z-index: 2;
@@ -58,11 +58,12 @@
     transition: .3s;
 }
 
-.sidebar-link:hover{
+.sidebar-link:hover {
     transform: translateX(8px) scale(1.05);
 }
 
 .link-title {
+    opacity: 0;
     transition: .3s;
     letter-spacing: 0.25px;
 }
@@ -73,21 +74,21 @@
     width: 100%;
 }
 
-/* When SideMenu is open: ========================== */
+/*________ When SideMenu is open __________*/
 
+.open-sidebar .sidebar_body .link-title{
+    opacity: 1;
+}
 .open-sidebar {
     width: 11rem;
 }
 
 .open-sidebar .sidebar-toggle {
-    transform: rotate(540deg);
+    transform: rotate(180deg);
     box-shadow: 0 -4px 4px 0 #00000025;
 }
 
-/* When sidebar link be active : ==========================================*/
-.sidebar_body li:has(.sidebar_link_active) {
-    background-color: brown;
-}
+/*_______ When sidebar link be active ____________*/
 
 .sidebar_link_active {
     position: relative;

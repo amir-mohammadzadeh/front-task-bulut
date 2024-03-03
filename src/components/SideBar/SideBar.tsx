@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import { ArrowLeft, BankIcon, UsersGroupIcon, HomeDashbord, SettingIcon, EmailIcon, ChartIcon, ListIcon, MoneySendIcon } from '../../assets/Icons'
 import './SideBar.css'
+import { NavLink } from 'react-router-dom'
 
 const SideBar = () => {
-
+    
     const [openSideBar, setOpenSideBar] = useState(false)
-    let link_title_style = openSideBar ? 'link-title opacity-1' : 'link-title opacity-0';
+
+    const onLinkActive = (link: { [key: string]: boolean }) => {
+        return link.isActive ? "sidebar-link sidebar_link_active" : "sidebar-link";
+    }
 
     return (
         <aside className={openSideBar ? "sidebar_container open-sidebar" : "sidebar_container"}>
@@ -17,158 +21,91 @@ const SideBar = () => {
             </div>
 
             <ul className="sidebar_body">
-
-                <li className='sidebar_link_active'>
-                    <a href="" className='sidebar-link'>
+                <li>
+                    <NavLink to='/' className={link => onLinkActive(link)}>
                         <span>
                             <HomeDashbord />
                         </span>
-                        <span className={link_title_style} >
+                        <span className="link-title" >
                             Dashbord
                         </span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="" className='sidebar-link'>
+                    <NavLink to='/report' className={link => onLinkActive(link)}>
                         <span>
                             <ChartIcon />
                         </span>
-                        <span className={link_title_style}>
+                        <span className="link-title">
                             Report
                         </span>
-                    </a>
+
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="" className='sidebar-link'>
+                    <NavLink to='/bank' className={link => onLinkActive(link)}>
                         <span>
                             <BankIcon />
                         </span>
-                        <span className={link_title_style}>
+                        <span className="link-title">
                             Bank
                         </span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="" className='sidebar-link'>
+                    <NavLink to='/email' className={link => onLinkActive(link)}>
                         <span>
                             <EmailIcon />
                         </span>
-                        <span className={link_title_style}>
+                        <span className="link-title">
                             Email
                         </span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="" className='sidebar-link'>
+                    <NavLink to='/group' className={link => onLinkActive(link)}>
                         <span>
                             <UsersGroupIcon />
                         </span>
-                        <span className={link_title_style}>
+                        <span className="link-title">
                             Group
                         </span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="" className='sidebar-link'>
+                    <NavLink to='/list' className={link => onLinkActive(link)}>
                         <span>
                             <ListIcon />
                         </span>
-                        <span className={link_title_style}>
+                        <span className="link-title">
                             List
                         </span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="" className='sidebar-link'>
+                    <NavLink to='/finance' className={link => onLinkActive(link)}>
                         <span>
                             <MoneySendIcon />
                         </span>
-                        <span className={link_title_style}>
+                        <span className="link-title">
                             Finance
                         </span>
-                    </a>
+                    </NavLink>
                 </li>
 
                 <li>
-                    <a href="" className='sidebar-link'>
+                    <NavLink to='/setting' className={link => onLinkActive(link)}>
                         <span>
                             <SettingIcon />
                         </span>
-                        <span className={link_title_style}>
+                        <span className="link-title">
                             Setting
                         </span>
-                    </a>
+                    </NavLink>
                 </li>
-
             </ul>
-
         </aside>
     )
 }
 
 export default SideBar
-
-/*
-
-                <div className="sidemenu-item">
-                    <a href="" className='sidemenu-link'>
-                        <span>
-                            <HomeDashbord />
-                        </span>
-                        <span className={link_title_style}>
-                            Dashbord
-                        </span>
-                    </a>
-                </div>
-
-
-*/
-
-/*
-<ul>
-                    <li className='sidemenu_link_active'>
-                        <a href="" className='sidemenu-link'>
-                            <span>
-                                <HomeDashbord />
-                            </span>
-                            <span className={link_title_style} >
-                                Dashbord
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" className='sidemenu-link'>
-                            <span>
-                                <Icons />
-                            </span>
-                            <span className={link_title_style}>
-                                Report
-                            </span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="" className='sidemenu-link'>
-                            <span>
-                                <Icons />
-                            </span>
-                            <span className={link_title_style}>
-                                Setting
-                            </span>
-                        </a>
-                    </li>
-
-                </ul>
-*/
-
-
-/*
-Dashbord
-Report
-Bank
-Email
-Group
-List
-Finance
-Setting
-*/

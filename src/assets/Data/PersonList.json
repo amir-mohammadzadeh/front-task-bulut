@@ -2,61 +2,61 @@
     {
         "id":1 ,
         "name":"Amir mohammadzadeh",
-        "image":"/public/profiles/profile_4.jpg",
+        "image":"profile_4.jpg",
         "number": "0277" 
     },
     {
         "id":2 ,
         "name":"Matin hasani",
-        "image":"/public/profiles/profile_6.jpg",
+        "image":"profile_6.jpg",
         "number": "8008" 
     },
     {
         "id": 3,
         "name":"Zahra Moradi",
-        "image":"/public/profiles/profile_2.jpg",
+        "image":"profile_2.jpg",
         "number": "0215" 
     },
     {
         "id": 4,
         "name":"Mohammad Kazemi",
-        "image":"/public/profiles/profile_3.jpg",
+        "image":"profile_3.jpg",
         "number": "0215" 
     },
     {
         "id": 5,
         "name":"Matin ghadri",
-        "image":"/public/profiles/profile_6.jpg",
+        "image":"profile_6.jpg",
         "number": "0215" 
     },
     {
         "id": 6,
         "name":"Shima Abasi",
-        "image":"/public/profiles/profile_5.jpg",
+        "image":"profile_5.jpg",
         "number": "0815" 
     },
     {
         "id": 7,
         "name":"Sajjad Asadi",
-        "image":"/public/profiles/profile_3.jpg",
+        "image":"profile_3.jpg",
         "number": "0215" 
     },
     {
         "id": 8,
         "name":"Matin Alipour",
-        "image":"/public/profiles/profile_4.jpg",
+        "image":"profile_4.jpg",
         "number": "0515" 
     },
     {
         "id": 9,
         "name":"Nasrin Adeli",
-        "image":"/public/profiles/profile_1.jpg",
+        "image":"profile_1.jpg",
         "number": "0619" 
     },
     {
         "id": 10,
         "name":"Arezo Karami",
-        "image":"/public/profiles/profile_5.jpg",
+        "image":"profile_5.jpg",
         "number": "0118" 
     }
 ]
