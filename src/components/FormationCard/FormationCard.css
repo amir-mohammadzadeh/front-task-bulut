@@ -45,8 +45,6 @@
     transition: .3s;
 }
 
-.formation-estimate {}
-
 .estimate-title {
     display: block;
     font-weight: 700;
@@ -56,4 +54,8 @@
 .estimate-value {
     font-weight: 600;
     color: var(--gray-500);
+}
+
+.formation-body .btn {
+    font-family: 'Josefin Sans', sans-serif;
 }

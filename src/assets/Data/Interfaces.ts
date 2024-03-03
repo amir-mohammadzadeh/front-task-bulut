@@ -29,7 +29,7 @@ export interface EmailData{
 
 export interface TodoItem{
     id:number,
-    ntitleame:string,
+    title:string,
     persons: PersonInfo[] ,
     date: string,
     icon: string

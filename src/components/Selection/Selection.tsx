@@ -4,14 +4,27 @@ import { ArrowDown, SearchIcon } from '../../assets/Icons'
 import { useOutsideClick } from '../../Hooks/useOutSideClick'
 
 
-const Selection_B = () => {
+const Selection = () => {
+    const itemList = Array.from(Array(50).keys())
     const [dropMenu, setDropMenu] = useState(false)
-    const [selectCount, setSelectCount] = useState(0)
+    const [selectedItems, setSelectedItems] = useState<number[]>([])
 
     // _____ Custom Hook => If click outside of selection, selection will close! 
     const menu_ref = useOutsideClick(setDropMenu)
 
-    const itemList = Array.from(Array(50).keys())
+    const onSelect = (itemID: number) => {
+        selectedItems.includes(itemID) ?
+            setSelectedItems([...selectedItems.filter(i => i !== itemID)])
+            : setSelectedItems([...selectedItems, itemID]);
+    }
+
+    const applayAction = () => {
+        setDropMenu(false)
+        console.log('_______ SELECTION ________')
+        console.log('Selected items :\n', selectedItems)
+        console.log('##########################')
+    }
+
     return (
         <div className="selection-btn">
             <span className='selection-label'>
@@ -23,30 +36,35 @@ const Selection_B = () => {
             </div>
             {dropMenu &&
                 <div ref={menu_ref} className="options">
-                    <ul className='options-content'>
-                    <li className="search-box">
+                    <div className="search-box">
                         <span className="search-icon">
                             <SearchIcon />
                         </span>
-                        <input type="search" placeholder='Search values'/>
-                    </li>
-                        {itemList.map((i, j) =>
-                            <li key={j}  className='menu-item'>
-                                <input type="checkbox" id={"menu_item-" + i} />
+                        <input type="search" placeholder='Search values' />
+                    </div>
+                    <ul className='options-content'>
+                        {itemList.map(i =>
+                            <li key={i} className='menu-item'>
+                                <input
+                                    type="checkbox"
+                                    id={"menu_item-" + i}
+                                    onChange={() => onSelect(i)}
+                                    checked={selectedItems.includes(i)}
+                                />
                                 <label htmlFor={"menu_item-" + i}>Menu item {i}</label>
                             </li>
                         )}
 
                     </ul>
                     <div className="option-footer">
-                        <button className='btn btn-primary select-btn'>
+                        <button className='btn btn-primary select-btn' onClick={applayAction}>
                             Applay
                         </button>
                         <div className="option-footer-labels">
                             <small>
-                                Selected: {selectCount}
+                                Selected: {selectedItems.length}
                             </small>
-                            <small>
+                            <small onClick={() => setSelectedItems([])}>
                                 Clear seleced
                             </small>
                         </div>
@@ -57,4 +75,4 @@ const Selection_B = () => {
     )
 }
 
-export default Selection_B
+export default Selection

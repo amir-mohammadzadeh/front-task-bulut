@@ -17,7 +17,7 @@ const FormationCard = ({ progress_value }: Prop) => {
             </header>
             <div className="formation-body">
                 <div className="formation-progressBar" style={{ '--progress-value': `${progress_value}%` } as React.CSSProperties}></div>
-                <div className="formation-estimate">
+                <div>
                     <span className='estimate-title'>
                         Estimated processing
                     </span>
@@ -25,7 +25,7 @@ const FormationCard = ({ progress_value }: Prop) => {
                         4-5 business days
                     </span>
                 </div>
-                <button className="btn btn-primary font-josefin">
+                <button className="btn btn-primary">
                     View status
                 </button>
             </div>

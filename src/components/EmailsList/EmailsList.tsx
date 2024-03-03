@@ -5,8 +5,8 @@ import EmailsData from '../../assets/Data/Emails.json'
 const EmailsList = () => {
   return (
     <div className='Emails-list_content'>
-      {EmailsData.map(email=>
-        <EmailCard key={email.id} name={email.name} subject={email.subject} date={email.date} image={email.image} />
+      {EmailsData.map(email =>
+        <EmailCard key={email.id} {...email} />
       )}
     </div>
   )

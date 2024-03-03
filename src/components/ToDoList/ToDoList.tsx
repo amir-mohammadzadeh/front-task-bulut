@@ -2,22 +2,10 @@ import { useState } from 'react'
 import { AddSquareIcon, ClipboardIcon, ClipboardTickIcon, ClockIcon, ReceiptIcon } from '../../assets/Icons'
 import AddToDoModal from '../Modals/AddToDoModal/AddToDoModal'
 import './ToDoList.css'
-import toDoData from '../../assets/Data/ToDoList.json'
+import Data from '../../assets/Data/ToDoList.json'
+import { TodoItem } from '../../assets/Data/Interfaces'
 
-interface Person {
-    id: number,
-    name: string,
-    number: string,
-    image: string
-}
-
-interface TodoList {
-    id: number,
-    title: string,
-    date: string,
-    icon: string,
-    persons: Person[]
-}
+interface newToDo extends Omit<TodoItem , 'id'> {}
 
 const iconMap: { [key: string]: any } = {
     receipt: <ReceiptIcon />,
@@ -27,10 +15,10 @@ const iconMap: { [key: string]: any } = {
 }
 
 const ToDoList = () => {
-    const [toDoList, setToDoList] = useState<TodoList[]>(toDoData)
+    const [toDoList, setToDoList] = useState<TodoItem[]>(Data)
     const [openAddTodoModal, setOpenAddTodoModal] = useState<boolean>(false)
 
-    const addNewTodo = (newToDo: TodoList) => {
+    const addNewTodo = (newToDo: newToDo) => {
         setToDoList([...toDoList, { ...newToDo, id: toDoList.length + 1 }])
     }
 
@@ -56,7 +44,7 @@ const ToDoList = () => {
                     )}
                 </ul>
 
-                <div className="todo-add-button todo-item" onClick={() => setOpenAddTodoModal(true)}>
+                <div className="todo-item" onClick={() => setOpenAddTodoModal(true)}>
                     <span className='todo-icon add-btn'>
                         <AddSquareIcon />
                     </span>

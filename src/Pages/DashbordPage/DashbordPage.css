@@ -33,15 +33,14 @@
 
 .main-emails-area {
     grid-area: email-content;
-    margin-top: .5rem;  
+    margin-top: .5rem;
 }
 
-
-.container {
+.chart-area_container {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 1rem ;
+    gap: 1rem;
     grid-auto-flow: row;
     grid-template-areas:
         "card Chart"
@@ -51,34 +50,5 @@
 .Chart-content {
     grid-area: Chart;
     width: 100%;
-    heightg: 18rem;
     min-height: 15rem;
-
-    /*
-    border-radius: 1.5rem;
-    padding: 1rem;
-    background-color: var(--white);   
-    box-shadow: 0px 2px 4px -2px #1018280F , 0px 4px 8px -2px #1018281A;
-*/
-}
-
-.card1 {
-    grid-area: card1;
-}
-
-.card2 {
-    grid-area: card2;
-}
-
-
-
-
-
-/*____________*/
-.ctest {
-    height: 20rem;
-}
-
-.etest {
-    height: 19rem;
 }

@@ -1,36 +1,30 @@
-
-.list-content{
+.list-content {
     flex-grow: 1;
-    background-colorh: rgb(236, 190, 73);
     overflow: hidden;
-    
 }
 
-.todo-list { /* ul  */
+/* ul  */
+.todo-list {
     position: relative;
     margin-bottom: 1rem;
     height: auto;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: rgba(134, 237, 100, 0);
-
-
     overflow: auto;
     max-height: 13.3rem;
 }
 
-.todo-list::-webkit-scrollbar{
+.todo-list::-webkit-scrollbar {
     width: 4px;
 }
-.todo-list::-webkit-scrollbar-thumb{
+
+.todo-list::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background-color: #919bae70;
 }
 
-
 .todo-item {
-    background-color: rgba(43, 226, 186, 0.0);
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -59,14 +53,10 @@
     color: var(--gray-400);
 }
 
-.todo-add-button {
-    kbackground-color: cyan;
-}
 
-.todo-add-button .add-btn {
+.todo-item .add-btn {
     background-color: var(--brand-200);
 }
-
 
 .sidemenu-footer {
     display: flex;
@@ -76,11 +66,10 @@
     font-size: 1rem;
     font-weight: 700;
     color: var(--gray-900);
-    kbackground-color: chartreuse;
 }
 
 .board-date {
-    font-family: Josefin Sans;
+    font-family: "Josefin Sans", sans-serif;
     font-size: .875rem;
     font-weight: 700;
     color: var(--gray-400);
