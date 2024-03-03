@@ -4,8 +4,8 @@
     gap: .5rem;
     padding: 0 .25rem .75rem .25rem;
     margin-top: .5rem;
-    height: 20rem;
-    max-height: 20rem;
+    height: auto;
+    max-height: 20.5rem;
     overflow-y: auto;
     scrollbar-width: none;
 }

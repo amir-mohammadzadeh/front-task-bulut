@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react'
+import { FormEvent, FormEventHandler, useState } from 'react'
 import { ArrowDown } from '../../../assets/Icons'
 import ModalContent from '../ModalContent'
 import './AddToDoModal.css'
@@ -30,10 +30,15 @@ const AddToDoModal = ({ onAccept, onCancel }: Prop) => {
         setPersonsInput([...personsInput.filter(person => person.id !== personID)])
     }
 
-    const submitHandler = () => {
+    const submitHandler = (e: FormEvent) => {
+        e.preventDefault()
+        const icon = "clipboard_tik" // We can put another input to choose an icon for the todo...
+        getDate()
         const newToDo = {
             title: titleInput,
-            persons: personsInput
+            persons: personsInput,
+            date: getDate(),
+            icon: icon
         }
         onAccept(newToDo)
         onCancel()
@@ -45,7 +50,7 @@ const AddToDoModal = ({ onAccept, onCancel }: Prop) => {
                 <span className="modal-title">
                     Add to do
                 </span>
-                <form action="" className='add-todo-form' onSubmit={submitHandler}>
+                <form className='add-todo-form' onSubmit={submitHandler}>
                     <div className="input-box">
                         <input name='title' id='todo_title' type="text" value={titleInput} onChange={setTitle} required />
                         <label htmlFor="todo_title" className='input-label'>
@@ -108,3 +113,11 @@ const AddToDoModal = ({ onAccept, onCancel }: Prop) => {
 }
 
 export default AddToDoModal
+
+function getDate() {
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+    const d = new Date()
+    const hr = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+    const date = `${months[d.getMonth()]} ${d.getDate()} at ${hr}`
+    return date
+}

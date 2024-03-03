@@ -1,9 +1,8 @@
 .main-sidemenu_container {
-
-    margin-top: 4rem;
-
+    height: 52rem;
     max-width: 18rem;
-    height: 100%;
+    margin-bottom: 1rem;
+
     padding: 1.5rem 1rem;
     border-radius: 2rem;
     background-color: var(--white);
@@ -31,67 +30,6 @@
     overflow: hidden;
 }
 
-.formation_container {
-    padding: 1.5rem;
-    border-radius: 1.5rem;
-    color: var(--gray-900);
-    background-color: var(--white);
-    border: 1px solid var(--gray-200);
-    box-shadow: 0px 4px 4px 0px #0000000F;
-
-}
-
-.formation-headr {
-    margin-bottom: 1rem;
-}
-
-.formation-headr span {
-    display: block;
-    font-size: 1rem;
-    font-weight: 700;
-    margin-top: 1rem;
-}
-
-.formation-body {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.formation-progressBar {
-    /*__ The " --progress-value " is defined linearly in the progress <div> element */
-    position: relative;
-    width: 100%;
-    height: 1.25rem;
-    border-radius: 1rem;
-    background-color: var(--gray-300);
-}
-
-.formation-progressBar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    border-radius: 1rem;
-    width: var(--progress-value);
-    background-color: var(--brand-700);
-    transition: .3s;
-}
-
-.formation-estimate {}
-
-.estimate-title {
-    display: block;
-    font-weight: 700;
-    margin-bottom: .5rem;
-}
-
-.estimate-value {
-    font-weight: 600;
-    color: var(--gray-500);
-}
-
 
 .todoList_container {
     display: flex;
@@ -99,4 +37,5 @@
     gap: 1rem;
     flex-grow: 1;
     kbackground-color: crimson;
+    
 }

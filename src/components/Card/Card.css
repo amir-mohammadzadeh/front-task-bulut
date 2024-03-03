@@ -1,5 +1,6 @@
 .card_container{
-    width: 12.5rem;
+    min-width: 12.5rem;/* 12.5 */
+    width: 100%;
     background-color: var(--white);
     border-radius: 1.5rem;
     padding: 1rem;

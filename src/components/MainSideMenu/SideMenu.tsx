@@ -1,11 +1,9 @@
-import { AddSquareIcon, ArrowDown, CalendarIcon, MessageNotifIcon, NotificationIcon, ReceiptIcon } from '../../assets/Icons'
+import { ArrowDown, CalendarIcon, MessageNotifIcon, NotificationIcon } from '../../assets/Icons'
+import FormationCard from '../FormationCard/FormationCard'
 import ToDoList from '../ToDoList/ToDoList'
 import './SideMenu.css'
 
-
 const SideMenu = () => {
-
-    console.log(window.screen.availHeight)
     return (
         <div className='main-sidemenu_container'>
             <header className='sidemenu-header'>
@@ -25,35 +23,15 @@ const SideMenu = () => {
                     <ArrowDown />
                 </span>
             </header>
-            <section className="formation_container">
-                <header className="formation-headr">
-                    <h2>
-                        Formation status
-                    </h2>
-                    <span>
-                        In progress
-                    </span>
-                </header>
-                <div className="formation-body">
-                    <div className="formation-progressBar" style={{ '--progress-value': '50%' } as React.CSSProperties}></div>
-                    <div className="formation-estimate">
-                        <span className='estimate-title'>
-                            Estimated processing
-                        </span>
-                        <span className='estimate-value'>
-                            4-5 business days
-                        </span>
-                    </div>
-                    <button className="btn btn-primary font-josefin">
-                        View status
-                    </button>
-                </div>
-            </section>
+
+            <FormationCard progress_value={75} />
 
             <section className="todoList_container">
-                <ToDoList  />
+                <h2>
+                    Your to-Do list
+                </h2>
+                <ToDoList />
             </section>
-
         </div>
     )
 }
