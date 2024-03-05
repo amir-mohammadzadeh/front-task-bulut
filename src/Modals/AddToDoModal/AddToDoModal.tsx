@@ -1,33 +1,22 @@
-import { FormEvent, FormEventHandler, useState } from 'react'
-import { ArrowDown } from '../../../assets/Icons'
+import { FormEvent, useState } from 'react'
 import ModalContent from '../ModalContent'
 import './AddToDoModal.css'
-import PersonList from './PersonList'
-import PersonsData from '../../../assets/Data/PersonList.json'
+import { PersonInfo, TodoItem } from '../../assets/Data/Interfaces'
+import PersonSelection from './PersonSelection'
 
-interface Person {
-    id: number,
-    name: string,
-    number: string,
-    image: string
-}
+interface newToDo extends Omit<TodoItem, 'id'> { }
+
 interface Prop {
-    onAccept: (newToDo: any) => void;
+    onAccept: (newToDo: newToDo) => void;
     onCancel: () => void
 }
 
-
 const AddToDoModal = ({ onAccept, onCancel }: Prop) => {
-    const [openMenu, setOpenMenu] = useState<boolean>(false)
-    const [personsInput, setPersonsInput] = useState<Person[]>([])
+    const [personsInput, setPersonsInput] = useState<PersonInfo[]>([])
     const [titleInput, setTitleInput] = useState<string>('')
 
     const setTitle = (event: FormEvent<HTMLInputElement>) => {
         setTitleInput(event.currentTarget.value)
-    }
-
-    const removePerson = (personID: number) => {
-        setPersonsInput([...personsInput.filter(person => person.id !== personID)])
     }
 
     const submitHandler = (e: FormEvent) => {
@@ -62,39 +51,10 @@ const AddToDoModal = ({ onAccept, onCancel }: Prop) => {
                     </div>
 
                     <div className="select-box">
-                        <div style={{ width: '100%', height: '100%' }}>
-
-                            <label className={openMenu || personsInput.length ? 'input-label onFocus' : 'input-label'} >
-                                Add a person
-                            </label>
-
-                            <span className="icon" onClick={() => setOpenMenu(!openMenu)}>
-                                <ArrowDown />
-                            </span>
-
-                            <ul className='value-content'>
-                                {personsInput.map(item =>
-                                    <li key={item.id} className='person'>
-                                        <img src={item.image} alt="" />
-                                        <span>
-                                            {item.name}
-                                        </span>
-                                        <span className="x-icon" onClick={() => removePerson(item.id)}>
-                                            &#10006;
-                                        </span>
-                                    </li>
-                                )}
-
-                            </ul>
-                        </div>
-                        {openMenu &&
-                            <PersonList
-                                closeMenu={setOpenMenu}
-                                listValue={PersonsData}
-                                selected={personsInput}
-                                onSelect={setPersonsInput}
-                            />
-                        }
+                        <PersonSelection
+                            selectedItems={personsInput}
+                            updateSelected={setPersonsInput}
+                        />
                     </div>
 
                     <div className="button-group">

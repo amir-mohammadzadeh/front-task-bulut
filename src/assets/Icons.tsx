@@ -1,4 +1,3 @@
-import { IconType } from "recharts/types/component/DefaultLegendContent"
 
 export const SettingIcon = () => {
     return (

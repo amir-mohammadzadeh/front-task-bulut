@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { AddSquareIcon, ClipboardIcon, ClipboardTickIcon, ClockIcon, ReceiptIcon } from '../../assets/Icons'
-import AddToDoModal from '../Modals/AddToDoModal/AddToDoModal'
+import AddToDoModal from '../../Modals/AddToDoModal/AddToDoModal'
 import './ToDoList.css'
 import Data from '../../assets/Data/ToDoList.json'
 import { TodoItem } from '../../assets/Data/Interfaces'
