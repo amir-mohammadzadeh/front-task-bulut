@@ -13,7 +13,7 @@ const EmailCard = ({ name, subject, date, image }: Prop) => {
     return (
         <div className="email-card_container">
             <div className="image-content">
-                <img src={`/public/profiles/${Profile_Image}`} alt={`${name.split(' ')[0]} Profile`} width='100%' height='100%' />
+                <img src={`/front-task-bulut/profiles/${Profile_Image}`} alt={`${name.split(' ')[0]} Profile`} width='100%' height='100%' />
             </div>
             <div className="email-card-body">
                 <span>

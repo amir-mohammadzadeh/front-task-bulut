@@ -13,5 +13,5 @@ export const Routes= [
 ]
 
 function UnAvaliablePage (){
-    return  <div className="PAGE_UnAvailable"> Page is not available ! </div>
+    return  <div className="PAGE_UnAvailable"> Page is not ready ! </div>
 }

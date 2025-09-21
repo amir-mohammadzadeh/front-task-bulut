@@ -1,8 +1,15 @@
 import { Dispatch, FormEvent, SetStateAction, useState } from "react"
+<<<<<<< HEAD:src/Modals/AddToDoModal/PersonSelection.tsx
 import { PersonInfo } from "../../assets/Data/Interfaces"
 import { ArrowDown, SearchIcon } from "../../assets/Icons"
 import Data from '../../assets/Data/PersonList.json'
 import { useOutsideClick } from "../../Hooks/useOutSideClick"
+=======
+import { PersonInfo } from "../../../assets/Data/Interfaces"
+import { ArrowDown, SearchIcon } from "../../../assets/Icons"
+import Data from '../../../assets/Data/PersonList.json'
+import { useOutsideClick } from "../../../Hooks/useOutSideClick"
+>>>>>>> 547732f (Update AddTodo modal):src/components/Modals/AddToDoModal/PersonSelection.tsx
 import './PersonSelection.css'
 
 interface Prop {

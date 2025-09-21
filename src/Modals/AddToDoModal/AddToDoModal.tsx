@@ -1,7 +1,11 @@
 import { FormEvent, useState } from 'react'
 import ModalContent from '../ModalContent'
 import './AddToDoModal.css'
+<<<<<<< HEAD:src/Modals/AddToDoModal/AddToDoModal.tsx
 import { PersonInfo, TodoItem } from '../../assets/Data/Interfaces'
+=======
+import { PersonInfo, TodoItem } from '../../../assets/Data/Interfaces'
+>>>>>>> 547732f (Update AddTodo modal):src/components/Modals/AddToDoModal/AddToDoModal.tsx
 import PersonSelection from './PersonSelection'
 
 interface newToDo extends Omit<TodoItem, 'id'> { }
