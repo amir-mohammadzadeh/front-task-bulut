@@ -17,7 +17,7 @@ const SideMenu = () => {
                     <MessageNotifIcon /> {/* Add Count   */}
                 </span>
                 <div className="header-profile-img">
-                    <img src="/public/profiles/profile_3.jpg" alt="" width='100%' height='100%' />
+                    <img src="/front-task-bulut/profiles/profile_3.jpg" alt="" width='100%' height='100%' />
                 </div>
                 <span>
                     <ArrowDown />

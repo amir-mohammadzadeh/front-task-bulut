@@ -1,16 +1,9 @@
 import { Dispatch, FormEvent, SetStateAction, useState } from "react"
-<<<<<<< HEAD:src/Modals/AddToDoModal/PersonSelection.tsx
-import { PersonInfo } from "../../assets/Data/Interfaces"
-import { ArrowDown, SearchIcon } from "../../assets/Icons"
-import Data from '../../assets/Data/PersonList.json'
-import { useOutsideClick } from "../../Hooks/useOutSideClick"
-=======
-import { PersonInfo } from "../../../assets/Data/Interfaces"
-import { ArrowDown, SearchIcon } from "../../../assets/Icons"
-import Data from '../../../assets/Data/PersonList.json'
-import { useOutsideClick } from "../../../Hooks/useOutSideClick"
->>>>>>> 547732f (Update AddTodo modal):src/components/Modals/AddToDoModal/PersonSelection.tsx
 import './PersonSelection.css'
+import { PersonInfo } from "../../assets/Data/Interfaces"
+import { useOutsideClick } from "../../Hooks/useOutSideClick"
+import Data from '../../assets/Data/PersonList.json'
+import { ArrowDown, SearchIcon } from "../../assets/Icons"
 
 interface Prop {
     selectedItems: PersonInfo[],
@@ -56,7 +49,7 @@ const PersonSelection = ({ selectedItems, updateSelected }: Prop) => {
                 <ul className='value-content'>
                     {selectedItems.map(item =>
                         <li key={item.id} className='person'>
-                            <img src={`/public/profiles/${item.image}`} alt="" />
+                            <img src={`/front-task-bulut/profiles/${item.image}`} alt="" />
                             <span>
                                 {item.name}
                             </span>
@@ -86,7 +79,7 @@ const PersonSelection = ({ selectedItems, updateSelected }: Prop) => {
                                     checked={inSelect.includes(person.id)}
                                 />
                                 <label htmlFor={"menu_item-" + person.id} className='option-label'>
-                                    <img src={`/public/profiles/${person.image}`} alt="profile" />
+                                    <img src={`/front-task-bulut/profiles/${person.image}`} alt="profile" />
                                     <span> {person.name}/{person.number} </span>
                                 </label>
                             </li>
