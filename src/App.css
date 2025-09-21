@@ -19,9 +19,27 @@
     width: 0;
 }
 
+.mobile-view {
+    display: none;
+    place-items: center;
+    font-size: 1.5rem;
+    padding: .75rem;
+    text-align: center;
+}
+
 @media screen and (min-width: 1444px) {
     .App_Main {
         max-width: 83rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .App_Main {
+        display: none;
+    }
+
+    .mobile-view {
+        display: grid;
     }
 }
 

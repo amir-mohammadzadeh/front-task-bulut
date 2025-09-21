@@ -10,6 +10,9 @@ function App() {
       <div className="App_container">
         <SideBar />
         {routes}
+        <div className="mobile-view">
+        {":("}  متاسفانه هنوز حالت واکنشگرای پروژه کار نشده 
+        </div>
       </div>
     </>
   )
